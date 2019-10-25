@@ -38,7 +38,7 @@ $ sudo apt-get install ruby
 $ sudo gem install fusuma
 ```
 
-### 5. Install xdotool (optional)
+### 5. Install xdotool (necessray rather than optional)
 
 For sending shortcuts:
 ```bash
@@ -151,6 +151,45 @@ threshold:
 interval:
   swipe: 1
   pinch: 1
+
+```
+### My setting
+
+```yaml
+swipe:
+  3:
+    left:
+      command: 'xdotool key alt+Shift+Tab'
+    right:
+      command: 'xdotool key alt+Tab'
+    up:
+      command: 'xdotool key super'
+    down:
+      command: 'xdotool key super'
+  4:
+    left:
+      command: 'xdotool key super+Left'
+    right:
+      command: 'xdotool key super+Right'
+    up:
+      command: 'xdotool key ctrl+Down'
+    down:
+      command: 'xdotool key ctrl+Up'
+pinch:
+  in:
+    command: 'xdotool key ctrl+shift+plus'
+    threshold: 0.1
+  out:
+     command: 'xdotool key ctrl+minus'
+     threshold: 0.1
+
+threshold:
+  swipe: 1
+  pinch: 1
+
+interval:
+  swipe: 1
+  pinch: 3
 
 ```
 
